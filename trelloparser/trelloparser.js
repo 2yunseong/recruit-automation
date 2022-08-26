@@ -1,8 +1,5 @@
-import { ID, PW } from "./env/env.js";
+import { ID, PW, TRELLO_URL, REQUEST_HEADER } from "./env/env.js";
 import puppeteer from "puppeteer";
-const TRELLO_URL =
-  "https://trello.com/b/g0aTyly7/2022-econovation-1%ED%95%99%EA%B8%B0-%EC%8B%A0%EC%9E%85%EB%AA%A8%EC%A7%91-tf%ED%8C%80";
-const REQUEST_HEADER = "1차 합격 (지원서) - 금 면접";
 
 function delay(time) {
   return new Promise(function (resolve) {
