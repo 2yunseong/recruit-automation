@@ -1,4 +1,4 @@
-import { ID, PW, TRELLO_URL, REQUEST_HEADER } from "./env/env.js";
+import { ID, PW, TRELLO_URL, REQUEST_HEADER } from "../env/env.js";
 import puppeteer from "puppeteer";
 
 function delay(time) {
