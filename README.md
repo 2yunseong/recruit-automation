@@ -1,6 +1,7 @@
 # Recruit-automation
 
 ### Intro
+![automation](./img/automation_example.gif)
 에코노베이션 신입모집을 위한 지원자 정보 추출 자동화 서비스
 - 1차 서류 합격자 명단의 이름, 연락처, 이메일을 자동 추출
 - 지원자 메세지 형식을 자동으로 생성
