@@ -24,7 +24,9 @@ export const getSuccessfulCandidate = async () => {
     width: 1920,
     height: 5000,
   });
+  console.log("페이지 초기 세팅 완료.");
   // get login page
+  console.log("로그인 시도 중...");
   await page.goto("https://trello.com/login");
   const idElement = await page.waitForSelector("#user");
   await idElement.click();
@@ -40,7 +42,9 @@ export const getSuccessfulCandidate = async () => {
   // get trello page
   await page.waitForSelector("#popover-boundary");
   await page.goto(TRELLO_URL);
+  console.log("로그인 완료.");
   // find successful candidate name
+  console.log("지원자 파싱 중...");
   await page.waitForSelector(".list-cards.u-fancy-scrollbar");
   const boardHeaders = await page.$$eval(
     ".list-header-name-assist.js-list-name-assist",
@@ -54,5 +58,6 @@ export const getSuccessfulCandidate = async () => {
     (cards) => cards.map((e) => e.innerText)
   );
   const candidateList = boardElement.map((e) => e.substr(0, 3));
+  console.log("지원자 파싱 완료.");
   return candidateList;
 };
